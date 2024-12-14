@@ -33,18 +33,12 @@ function Login(props) {
  const logingoogle = async () => {
   props.setProgress(20)
   try{
-    if(w>750){
+   
       await signInWithPopup(auth, googleProvider);
       props.setProgress(50)
       localStorage.setItem('uid', JSON.stringify(auth.currentUser.uid));
       props.setProgress(70)
-         }
-         else{
-           await signInWithRedirect(auth, googleProvider)
-           props.setProgress(50)
-      localStorage.setItem('uid', JSON.stringify(auth.currentUser.uid));
-      props.setProgress(70)
-         }
+         
          props.setProgress(100)
  navigate('/home')
   }
