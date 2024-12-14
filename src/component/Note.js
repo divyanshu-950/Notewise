@@ -59,7 +59,7 @@ function Note(props) {
        await updateDoc(note,{status:'completed'
        })
        getNotesList();
-       props.Alert("Updated Successfully",'success')
+       props.Alert("Task Completed ",'success')
      }
      catch(err){
        props.Alert(err,'danger')
@@ -91,7 +91,7 @@ function Note(props) {
       dismiss.click()
       setTitle("");
       getNotesList();
-      props.Alert("Added Successfully",'success')
+      props.Alert("Task Added Successfully",'success')
     } catch (err) {
       props.Alert(err,'danger')
     }
@@ -106,7 +106,7 @@ function Note(props) {
     <div className="to-do" style={{padding:'30px 100px',marginTop:'100px'}}>
     <p className='row shadow p-3  'style={{fontSize:'28px',fontWeight:'700',letterSpacing:'6px',borderRadius:'10px',color:'white',backgroundColor:"black"}}>
       <span className="col-1 p-1 px-3" >No.</span>
-      <span className="col-6 p-1 px-3" >To-Do-Item</span>
+      <span className="col-6 p-1 px-3" >To-Do-Task</span>
       <span className="col-2 p-1 px-3" >Status</span>
       <span className="col-3 p-1 px-4" >Action</span>
      </p>
@@ -153,7 +153,7 @@ function Note(props) {
           letterSpacing: "2px",
         }}
       >
-        <i className="fa-solid fa-plus fa-xl"></i> Add Item
+        <i className="fa-solid fa-plus fa-xl"></i> Add Task
       </button>
     </div>
 
@@ -176,7 +176,7 @@ function Note(props) {
                 textAlign: "center",
               }}
             >
-              Add to-do-item
+              Add to-do-task
             </p>
             <button
             id="adddismiss"
@@ -195,7 +195,7 @@ function Note(props) {
                   htmlFor="title"
                   className="col-form-label"
                 >
-                  To-do-item
+                  To-do-task
                 </label>
                 <input
                   value={title}
@@ -238,7 +238,7 @@ function Note(props) {
     <div className="to-do" style={{padding:' 5px 10px ',marginTop:'100px'}}>
     <p className='row shadow-lg py-2 d-flex 'style={{justifyContent:'space-evenly',fontSize:'16px',fontWeight:'500',letterSpacing:'2px',borderRadius:'5px',color:'white',backgroundColor:"black"}}>
       <span className="col-1 p-0 " >No.</span>
-      <span className="col-4 p-0" >To-Do-Item</span>
+      <span className="col-4 p-0" >To-Do-Task</span>
       <span className="col-2 p-0  " >Status</span>
       <span className="col-2 p-0 " >Action</span>
      </p>
@@ -307,7 +307,7 @@ function Note(props) {
                 letterSpacing: "2px",
               }}
             >
-              Add to-do-item
+              Add to-do-task
             </p>
             <button
             id="adddismiss"
@@ -326,7 +326,7 @@ function Note(props) {
                   htmlFor="title"
                   className="col-form-label"
                 >
-                  To-do-item
+                  To-do-task
                 </label>
                 <input
                   value={title}
